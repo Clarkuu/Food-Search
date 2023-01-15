@@ -5,7 +5,7 @@ import ResultsShowScreen from "./src/screens/ResultsShowScreen";
 
 const navigator = createStackNavigator({
     Search: SearchScreen,
-    Results:ResultsShowScreen
+    Results:ResultsShowScreen,
 },{
     initialRouteName:'Search',
     defaultNavigationOptions:{

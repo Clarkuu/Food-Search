@@ -10,10 +10,11 @@ export default  () => {
             const response = await yelp.get('/search',{
                 params:{
                     limit:50,
-                    term:searchTerm,
-                    location: 'san jose'
+                    term: searchTerm,
+                    location: 'Tampa'
                 }
             });
+            console.log( JSON.stringify(response.data.businesses));
             setResults(response.data.businesses);
         }   catch(e){
             setErrorMessage('Something went Wrong')
@@ -21,7 +22,7 @@ export default  () => {
     }
 
     useEffect(() => {
-        searchApi('pasta');
+        searchApi('Pasta');
     },[])
 
     return [searchApi,results,errorMessage];
